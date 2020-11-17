@@ -30,9 +30,13 @@
         var topVar = s_height/2 - 300/2;
         window.open("./pages/popup01.html", "popup","width=300,height=300,left="+leftVar+",top="+topVar)
         }
-
+        //open()함수가 반환하는 윈도우 객체를 저장하기 위한 전역변수
         var winObj1;
-
+        /*
+        팝업창에 대한 제어
+        -부모창에서 자식 팝업창을 제어할땐 팝업창의 참조변수를 이용한다.
+        -즉 open()이 반환하는 윈도우객체를 통해 제어하게된다.
+        */
 function popFirst(){
     winObj1 = window.open("./pages/popup01.html1",
     "pop1", "width=300,height=300,left=0,top=0")
@@ -43,8 +47,15 @@ function popClose(){
 winObj1.close();
 }
 
+function openChild1(){
+       window.open("./pages/openChild1st.html","chilid1", "width=300, height=300, left=0, top=0");
+   }
+
+
     </script>
    
+
+
 </head>
 <body>
     <h2>팝업창 제어하기</h2>
